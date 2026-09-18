@@ -58,7 +58,7 @@ function Hero() {
           </h1>
 
           <div className="mt-3 flex items-center gap-4 sm:mt-5">
-            <span className="h-px w-10 bg-white/60 sm:w-16" />
+           
 
             <p className="font-serif text-2xl italic text-white/90 sm:text-3xl lg:text-4xl">
               Jibhi

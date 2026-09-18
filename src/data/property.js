@@ -2,8 +2,8 @@ export const property = {
   name: "Royal Cottage Jibhi",
   location: "Jibhi, Tirthan Valley, Himachal Pradesh, India",
 
-  phone: "8894576440",
-  whatsapp: "918894576440",
+  phone: "8219921345",
+  whatsapp: "918219921345",
 
   tagline: "A Private Himalayan Escape",
 

@@ -2,7 +2,8 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import StaySection from "./components/StaySection";
 import ExperienceSection from "./components/ExperienceSection";
-
+import GallerySection from "./components/GallerySection";
+import LocationSection from "./components/LocationSection";
 function App() {
   return (
     <div className="min-h-screen bg-[#f5f2eb]">
@@ -35,6 +36,9 @@ function App() {
         <StaySection />
 
         <ExperienceSection />
+        <GallerySection />
+
+<LocationSection />
       </main>
     </div>
   );
