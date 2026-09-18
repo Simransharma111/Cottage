@@ -4,9 +4,12 @@ import StaySection from "./components/StaySection";
 import ExperienceSection from "./components/ExperienceSection";
 import GallerySection from "./components/GallerySection";
 import LocationSection from "./components/LocationSection";
+import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
+
 function App() {
   return (
-    <div className="min-h-screen bg-[#f5f2eb]">
+    <div id="top" className="min-h-screen bg-[#f5f2eb]">
       <Header />
 
       <main>
@@ -16,17 +19,19 @@ function App() {
           id="intro"
           className="px-5 py-24 sm:px-8 sm:py-32 lg:px-10 lg:py-40"
         >
-          <div className="mx-auto max-w-4xl text-center">
-            <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.35em] text-[#806b4d]">
+          <div className="max-w-4xl">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.35em] text-[#806b4d]">
               Welcome to Royal Cottage
             </p>
 
-            <h2 className="font-serif text-4xl leading-tight text-[#1f3529] sm:text-5xl lg:text-6xl">
+            <h2 className="mt-5 max-w-3xl font-serif text-5xl leading-[0.95] text-[#1f3529] sm:text-6xl lg:text-7xl">
               Where the mountains
-              <span className="block italic">slow you down.</span>
+              <span className="block italic text-[#806b4d]">
+                slow you down.
+              </span>
             </h2>
 
-            <p className="mx-auto mt-7 max-w-2xl text-sm leading-8 text-[#626961] sm:text-base">
+            <p className="mt-8 max-w-2xl text-sm leading-8 text-[#626961] sm:text-base">
               A peaceful stay in Jibhi, Tirthan Valley, created for quiet
               mornings, mountain air and time away from the ordinary.
             </p>
@@ -36,10 +41,15 @@ function App() {
         <StaySection />
 
         <ExperienceSection />
+
         <GallerySection />
 
-<LocationSection />
+        <LocationSection />
       </main>
+
+      <Footer />
+
+      <WhatsAppButton />
     </div>
   );
 }

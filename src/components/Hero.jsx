@@ -1,4 +1,9 @@
-import { ArrowDown, ArrowUpRight, Volume2, VolumeX } from "lucide-react";
+import {
+  ArrowDown,
+  ArrowUpRight,
+  Volume2,
+  VolumeX,
+} from "lucide-react";
 import { useState } from "react";
 import { property } from "../data/property";
 
@@ -14,9 +19,9 @@ function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-end overflow-hidden bg-[#18271f]"
+      className="relative min-h-screen overflow-hidden bg-[#18271f] text-white"
     >
-      {/* Background poster */}
+      {/* Background image */}
       <div className="absolute inset-0">
         <img
           src="/images/hero-poster.jpg"
@@ -32,95 +37,145 @@ function Hero() {
         muted={isMuted}
         loop
         playsInline
-        poster="/images/hero-poster.jpeg"
+        poster="/images/hero-poster.jpg"
         preload="metadata"
         aria-hidden="true"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
       </video>
 
-      {/* Cinematic overlays */}
-      <div className="absolute inset-0 bg-black/30" />
+      {/* Cinematic overlay */}
+      <div className="absolute inset-0 bg-black/20" />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-black/25" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/25 to-black/5" />
 
-      <div className="absolute inset-0 bg-gradient-to-r from-black/35 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-black/20" />
 
-      {/* Content */}
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-20 pt-36 sm:px-8 sm:pb-24 lg:px-10 lg:pb-28">
-        <div className="max-w-4xl">
-          <p className="mb-5 text-[10px] font-medium uppercase tracking-[0.4em] text-white/75 sm:text-xs">
-            Jibhi · Tirthan Valley · Himachal Pradesh
-          </p>
+      {/* Subtle vignette */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_45%,transparent_0%,transparent_35%,rgba(0,0,0,0.28)_100%)]" />
 
-          <h1 className="font-serif text-6xl font-medium leading-[0.9] tracking-tight text-white sm:text-7xl md:text-8xl lg:text-[7.5rem]">
-            Royal Cottage
-          </h1>
+      {/* Main content */}
+      <div className="relative z-10 flex min-h-screen flex-col justify-end">
+        <div className="mx-auto w-full max-w-[1500px] px-5 pb-28 pt-36 sm:px-8 sm:pb-32 lg:px-12 lg:pb-36">
+          <div className="max-w-3xl">
+            {/* Location */}
+            <div className="mb-7 flex items-center gap-3">
+              <span className="h-px w-8 bg-white/60" />
 
-          <div className="mt-3 flex items-center gap-4 sm:mt-5">
-           
+              <p className="text-[9px] font-medium uppercase tracking-[0.38em] text-white/75 sm:text-[10px]">
+                Jibhi · Tirthan Valley · Himachal Pradesh
+              </p>
+            </div>
 
-            <p className="font-serif text-2xl italic text-white/90 sm:text-3xl lg:text-4xl">
-              Jibhi
+            {/* Heading */}
+            <h1 className="font-serif text-[4rem] font-normal leading-[0.88] tracking-[-0.035em] sm:text-[5.5rem] md:text-[6.5rem] lg:text-[7rem]">
+              <span className="block">Royal</span>
+
+              <span className="ml-[8vw] block italic text-white/90 sm:ml-16">
+                Cottage
+              </span>
+
+              <span className="mt-2 block text-[1.5rem] font-normal italic leading-none text-[#d8c6a4] sm:text-[2rem] md:text-[2.3rem] lg:text-[2.5rem]">
+                Jibhi
+              </span>
+            </h1>
+
+            {/* Description */}
+            <p className="mt-8 max-w-md text-[13px] leading-7 text-white/72 sm:mt-9 sm:text-sm sm:leading-8">
+              {property.tagline}. A quiet Himalayan retreat surrounded by
+              forest, mountain air and the natural beauty of Tirthan Valley.
             </p>
+
+            {/* CTA */}
+            <div className="mt-9 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="group inline-flex min-h-[52px] items-center justify-center gap-4 bg-white px-7 text-[9px] font-semibold uppercase tracking-[0.22em] text-[#18271f] transition-all duration-500 hover:bg-[#e9e4d8]"
+              >
+                <span>Reserve Your Stay</span>
+
+                <ArrowUpRight
+                  size={15}
+                  strokeWidth={1.5}
+                  className="transition-transform duration-500 group-hover:translate-x-1 group-hover:-translate-y-1"
+                />
+              </a>
+
+              <a
+                href="#gallery"
+                className="group inline-flex min-h-[52px] items-center justify-center gap-3 border border-white/35 bg-black/10 px-7 text-[9px] font-semibold uppercase tracking-[0.22em] text-white backdrop-blur-sm transition-all duration-500 hover:border-white/70 hover:bg-white/10"
+              >
+                <span>Explore The Cottage</span>
+
+                <span className="h-px w-0 bg-white transition-all duration-500 group-hover:w-5" />
+              </a>
+            </div>
           </div>
+        </div>
 
-          <p className="mt-7 max-w-xl text-sm leading-7 text-white/80 sm:text-base sm:leading-8">
-            {property.tagline}. Discover quiet mornings, mountain air and the
-            natural beauty of Jibhi, Tirthan Valley.
-          </p>
+        {/* Bottom information strip */}
+        <div className="absolute bottom-0 left-0 right-0 border-t border-white/15 bg-black/10 backdrop-blur-[2px]">
+          <div className="mx-auto flex max-w-[1500px] items-center justify-between px-5 py-5 sm:px-8 lg:px-12">
+            <div className="flex items-center gap-5 sm:gap-8">
+              <div>
+                <p className="text-[8px] uppercase tracking-[0.25em] text-white/40">
+                  Location
+                </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <p className="mt-1 text-[10px] text-white/75 sm:text-xs">
+                  Jibhi, Himachal Pradesh
+                </p>
+              </div>
+
+              <span className="hidden h-7 w-px bg-white/15 sm:block" />
+
+              <div className="hidden sm:block">
+                <p className="text-[8px] uppercase tracking-[0.25em] text-white/40">
+                  Valley
+                </p>
+
+                <p className="mt-1 text-[10px] text-white/75 sm:text-xs">
+                  Tirthan Valley
+                </p>
+              </div>
+            </div>
+
             <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="group inline-flex items-center justify-center gap-3 bg-white px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-[#18271f] transition-all duration-300 hover:bg-[#f0ede5]"
+              href="#intro"
+              className="group flex items-center gap-3"
+              aria-label="Scroll to explore"
             >
-              Reserve Your Stay
+              <span className="hidden text-[8px] uppercase tracking-[0.3em] text-white/50 sm:block">
+                Discover
+              </span>
 
-              <ArrowUpRight
-                size={15}
-                strokeWidth={1.7}
-                className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-              />
-            </a>
-
-            <a
-              href="#gallery"
-              className="inline-flex items-center justify-center border border-white/40 px-7 py-4 text-[10px] font-semibold uppercase tracking-[0.2em] text-white transition-all duration-300 hover:border-white hover:bg-white/10"
-            >
-              Explore The Cottage
+              <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/25 transition duration-500 group-hover:border-white/60 group-hover:bg-white/10">
+                <ArrowDown
+                  size={13}
+                  strokeWidth={1.4}
+                  className="transition-transform duration-500 group-hover:translate-y-0.5"
+                />
+              </span>
             </a>
           </div>
         </div>
       </div>
 
-      {/* Video controls */}
+      {/* Video control */}
       <button
         type="button"
         onClick={() => setIsMuted((value) => !value)}
-        className="absolute bottom-8 left-5 z-20 flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-black/10 text-white backdrop-blur-sm transition hover:bg-white hover:text-[#18271f] sm:left-8 lg:left-10"
+        className="absolute bottom-[76px] left-5 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/25 bg-black/15 text-white/80 backdrop-blur-md transition duration-300 hover:border-white/60 hover:bg-white hover:text-[#18271f] sm:bottom-[78px] sm:left-8 lg:left-12"
         aria-label={isMuted ? "Unmute video" : "Mute video"}
       >
         {isMuted ? (
-          <VolumeX size={16} strokeWidth={1.5} />
+          <VolumeX size={15} strokeWidth={1.4} />
         ) : (
-          <Volume2 size={16} strokeWidth={1.5} />
+          <Volume2 size={15} strokeWidth={1.4} />
         )}
       </button>
-
-      {/* Scroll indicator */}
-      <a
-        href="#intro"
-        className="absolute bottom-7 right-5 z-10 hidden items-center gap-3 text-[9px] uppercase tracking-[0.3em] text-white/70 sm:flex lg:right-10"
-      >
-        <span>Scroll to explore</span>
-
-        <span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/30">
-          <ArrowDown size={14} strokeWidth={1.5} />
-        </span>
-      </a>
     </section>
   );
 }
