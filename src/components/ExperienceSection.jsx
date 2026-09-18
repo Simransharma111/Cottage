@@ -6,28 +6,35 @@ const experiences = [
     title: "Jibhi Waterfall",
     description:
       "A beautiful natural escape surrounded by the forest and the peaceful atmosphere of Jibhi.",
-    image: "/images/jibhi-waterfall.jpg",
+    image: "/images/img3.jpeg",
   },
   {
     number: "02",
     title: "Forest Walks",
     description:
       "Slow down and explore the quiet trails, cedar forests and mountain surroundings of Tirthan Valley.",
-    image: "/images/forest-walk.jpg",
+    image: "/images/img1.jpeg",
   },
   {
     number: "03",
     title: "Jalori Pass",
     description:
       "Discover dramatic Himalayan views and mountain landscapes around the famous Jalori Pass.",
-    image: "/images/jalori-pass.jpg",
+    image: "/images/img5.jpeg",
   },
   {
     number: "04",
     title: "Serolsar Lake",
     description:
       "Take a journey into the mountains and experience the peaceful alpine surroundings of Serolsar Lake.",
-    image: "/images/serolsar-lake.jpg",
+    image: "/images/img4.jpeg",
+  },
+   {
+    number: "05",
+    title: "Raghupur Fort",
+    description:
+      "Take a journey into the mountains and experience the peaceful alpine surroundings of Serolsar Lake.",
+    image: "/images/img2.jpeg",
   },
 ];
 

@@ -1,26 +1,26 @@
 const galleryImages = [
   {
-    src: "/images/cottage.jpg",
+    src: "/images/cottage.jpeg",
     alt: "Royal Cottage Jibhi",
     className: "md:col-span-2 md:row-span-2",
   },
   {
-    src: "/images/jibhi-waterfall.jpg",
+    src: "/images/img3.jpeg",
     alt: "Jibhi Waterfall",
     className: "",
   },
   {
-    src: "/images/tirthan-valley.jpg",
+    src: "/images/img2.jpeg",
     alt: "Tirthan Valley",
     className: "",
   },
   {
-    src: "/images/jalori-pass.jpg",
+    src: "/images/img5.jpeg",
     alt: "Jalori Pass",
     className: "md:col-span-2",
   },
   {
-    src: "/images/serolsar-lake.jpg",
+    src: "/images/img4.jpeg",
     alt: "Serolsar Lake",
     className: "",
   },
