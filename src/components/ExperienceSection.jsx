@@ -33,7 +33,7 @@ const experiences = [
     number: "05",
     title: "Raghupur Fort",
     description:
-      "Take a journey into the mountains and experience the peaceful alpine surroundings of Serolsar Lake.",
+      "Take a journey into the mountains and experience the peaceful alpine surroundings of Raghupur Fort.",
     image: "/images/img2.jpeg",
   },
 ];
