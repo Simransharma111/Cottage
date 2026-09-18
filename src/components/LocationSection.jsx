@@ -116,7 +116,7 @@ function LocationSection() {
             <div className="w-full">
               <div className="relative aspect-[4/5] overflow-hidden bg-[#d8d2c4] sm:aspect-[5/4] lg:aspect-[4/5]">
                 <img
-                  src="/images/tirthan-valley.jpg"
+                  src="/images/hero-poster.jpeg"
                   alt="Tirthan Valley near Royal Cottage Jibhi"
                   loading="lazy"
                   className="h-full w-full object-cover"
